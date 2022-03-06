@@ -1,0 +1,35 @@
+print(''' Enter
++ for add
+- for subtract
+* for multiply
+/ for divide
+= for end''')
+res = float(input('Enter the number:'))
+op = input('Enter the operation:')
+while op != '=':
+    if op == '+':
+        b = float(input('Enter the number:'))
+        res = res + b
+        print(res)
+        op = input('Enter the operation:')
+    elif op == '-':
+        b = float(input('Enter the number:'))
+        res = res - b
+        print(res)
+        op = input('Enter the operation:')
+    elif op == '*':
+        b = float(input('Enter the number:'))
+        res = res * b
+        print(res)
+        op = input('Enter the operation:')  
+    elif op == '/':
+        b = float(input('Enter the number:'))
+        if b == 0:
+            print('Invalid, use another number')
+            continue
+        else:
+            res = res/ b
+            print(res)
+            op = input('Enter the operation:')  
+if op == '=':
+    print(res)
